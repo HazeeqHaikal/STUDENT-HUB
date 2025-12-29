@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IMS566 Student Hub Portal - Modern Academic Management">
+    <title>Student Hub Portal | Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-slate-900 scroll-smooth">
+    <nav class="flex justify-between items-center px-6 py-6 max-w-7xl mx-auto border-b border-slate-50">
+        <div class="flex items-center gap-2 text-indigo-600 font-bold text-2xl">
+            <i data-lucide="graduation-cap"></i> StudentHub
+        </div>
+        <div class="flex gap-2 md:gap-4">
+            <a href="login.html" class="px-4 py-2 font-semibold text-slate-600 hover:text-indigo-600 transition">Login</a>
+            <a href="register.html" class="px-6 py-2 font-bold bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition shadow-lg shadow-indigo-100">Join Now</a>
+        </div>
+    </nav>
+
+    <header class="max-w-7xl mx-auto px-6 py-32 text-center">
+        <span class="bg-indigo-50 text-indigo-600 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 inline-block">University Management Prototype</span>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-8 leading-tight tracking-tight">Your Academic Future, <br><span class="text-indigo-600">Managed Simply.</span></h1>
+        <p class="text-lg md:text-xl text-slate-500 max-w-3xl mx-auto mb-12">One unified portal for UiTM students to monitor academic performance, course registrations, and campus updates with real-time data visualization.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="login.html" class="px-10 py-5 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition flex items-center justify-center gap-2 text-lg">
+                Enter Portal <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+        </div>
+    </header>
+
+    <footer class="py-12 border-t border-slate-100 text-center text-slate-400 text-sm">
+        <p>&copy; 2024 Student Hub Portal. Created for IMS566 Individual Project.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

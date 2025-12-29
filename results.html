@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results | Student Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>if (sessionStorage.getItem('isLogged') !== 'true') window.location.replace('login.html');</script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap'); body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 flex flex-col md:flex-row min-h-screen">
+    <aside class="w-full md:w-72 bg-white border-r border-slate-200 p-8 flex flex-col gap-10">
+        <div class="flex items-center gap-2 text-indigo-600 font-bold text-2xl"><i data-lucide="graduation-cap"></i> StudentHub</div>
+        <nav class="flex-grow space-y-3">
+            <a href="dashboard.html" class="flex items-center gap-4 p-4 text-slate-500 hover:bg-slate-50 rounded-2xl transition font-semibold">
+                <i data-lucide="layout-dashboard"></i> Dashboard
+            </a>
+            <a href="courses.html" class="flex items-center gap-4 p-4 text-slate-500 hover:bg-slate-50 rounded-2xl transition font-semibold">
+                <i data-lucide="book-open"></i> My Courses
+            </a>
+            <a href="results.html" class="flex items-center gap-4 p-4 bg-indigo-50 text-indigo-600 font-bold rounded-2xl transition">
+                <i data-lucide="award"></i> Exam Results
+            </a>
+            <a href="announcements.html" class="flex items-center gap-4 p-4 text-slate-500 hover:bg-slate-50 rounded-2xl transition font-semibold">
+                <i data-lucide="megaphone"></i> Campus News
+            </a>
+            <a href="profile.html" class="flex items-center gap-4 p-4 text-slate-500 hover:bg-slate-50 rounded-2xl transition font-semibold">
+                <i data-lucide="user"></i> My Profile
+            </a>
+        </nav>
+        <button onclick="sessionStorage.clear(); window.location.replace('index.html');" class="flex items-center gap-4 p-4 text-red-500 font-bold hover:bg-red-50 rounded-2xl transition border-t pt-10">
+            <i data-lucide="log-out"></i> Logout
+        </button>
+    </aside>
+
+    <main class="flex-grow p-12">
+        <h1 class="text-4xl font-extrabold text-slate-900 mb-10">Semester Results</h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex justify-between items-start hover:border-indigo-500 transition">
+                <div class="pr-4">
+                    <h4 class="font-bold text-slate-900 text-lg leading-tight">Advanced Database Management System</h4>
+                    <p class="text-xs text-slate-400 font-bold uppercase mt-2 tracking-widest">IMS 560 • 3 Credits</p>
+                </div>
+                <div class="text-4xl font-black text-indigo-600 whitespace-nowrap">A</div>
+            </div>
+
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex justify-between items-start hover:border-indigo-500 transition">
+                <div class="pr-4">
+                    <h4 class="font-bold text-slate-900 text-lg leading-tight">User Experience Design</h4>
+                    <p class="text-xs text-slate-400 font-bold uppercase mt-2 tracking-widest">IMS 564 • 3 Credits</p>
+                </div>
+                <div class="text-4xl font-black text-indigo-600 whitespace-nowrap">A-</div>
+            </div>
+
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex justify-between items-start hover:border-indigo-500 transition">
+                <div class="pr-4">
+                    <h4 class="font-bold text-slate-900 text-lg leading-tight">Advanced Web Design Development & Content Management</h4>
+                    <p class="text-xs text-slate-400 font-bold uppercase mt-2 tracking-widest">IMS 566 • 3 Credits</p>
+                </div>
+                <div class="text-4xl font-black text-indigo-600 whitespace-nowrap">A+</div>
+            </div>
+
+            <div class="bg-white p-8 rounded-[2rem] border border-slate-200 shadow-sm flex justify-between items-start hover:border-indigo-500 transition">
+                <div class="pr-4">
+                    <h4 class="font-bold text-slate-900 text-lg leading-tight">Information System Project Management</h4>
+                    <p class="text-xs text-slate-400 font-bold uppercase mt-2 tracking-widest">IMS 565 • 3 Credits</p>
+                </div>
+                <div class="text-4xl font-black text-indigo-600 whitespace-nowrap">B+</div>
+            </div>
+
+        </div>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

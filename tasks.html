@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks | InternTrack</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- 🛑 SESSION GUARD -->
+    <script>
+        if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.replace('login.html');
+        }
+    </script>
+</head>
+<body class="bg-slate-50 flex flex-col md:flex-row min-h-screen">
+    <!-- Sidebar (Same as Dashboard) -->
+    <aside class="w-full md:w-64 bg-white border-r border-slate-200 p-6 flex flex-col gap-8">
+        <div class="flex items-center gap-2 text-blue-600 font-bold text-xl">InternTrack</div>
+        <nav class="flex-grow space-y-2">
+            <a href="dashboard.html" class="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-50 rounded-xl">
+                <i data-lucide="layout-dashboard"></i> Dashboard
+            </a>
+            <a href="applications.html" class="flex items-center gap-3 p-3 text-slate-500 hover:bg-slate-50 rounded-xl">
+                <i data-lucide="file-text"></i> Applications
+            </a>
+            <a href="tasks.html" class="flex items-center gap-3 p-3 bg-blue-50 text-blue-600 font-bold rounded-xl">
+                <i data-lucide="check-square"></i> Prep Tasks
+            </a>
+        </nav>
+        <button onclick="sessionStorage.clear(); window.location.replace('index.html');" class="flex items-center gap-3 p-3 text-red-500 font-bold hover:bg-red-50 rounded-xl transition border-t pt-6">
+            <i data-lucide="log-out"></i> Logout
+        </button>
+    </aside>
+
+    <main class="flex-grow p-8">
+        <h1 class="text-3xl font-bold mb-8">Preparation Roadmap</h1>
+        <div class="grid gap-4">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 flex items-center justify-between">
+                <div><h3 class="font-bold">Resume Polish</h3><p class="text-sm text-slate-400 font-medium">Completed Oct 12</p></div>
+                <div class="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-white"><i data-lucide="check" class="w-4 h-4"></i></div>
+            </div>
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 flex items-center justify-between">
+                <div><h3 class="font-bold">GitHub Portfolio</h3><p class="text-sm text-slate-400 font-medium">In Progress...</p></div>
+                <div class="w-6 h-6 bg-blue-100 rounded-full"></div>
+            </div>
+        </div>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>

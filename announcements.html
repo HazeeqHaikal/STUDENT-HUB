@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News | Student Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>if (sessionStorage.getItem('isLogged') !== 'true') window.location.replace('login.html');</script>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap'); body { font-family: 'Plus Jakarta Sans', sans-serif; }</style>
+</head>
+<body class="bg-slate-50 flex flex-col md:flex-row min-h-screen">
+    <aside class="w-full md:w-72 bg-white border-r border-slate-200 p-8 flex flex-col gap-10">
+        <div class="flex items-center gap-2 text-indigo-600 font-bold text-2xl"><i data-lucide="graduation-cap"></i> StudentHub</div>
+        <nav class="flex-grow space-y-3">
+            <a href="dashboard.html" class="flex items-center gap-4 p-4 text-slate-500 hover:bg-slate-50 rounded-2xl transition font-semibold">
+                <i data-lucide="layout-dashboard"></i> Dashboard
+            </a>
+            <a href="courses.html" class="flex items-center gap-4 p-4 text-slate-500 hover:bg-slate-50 rounded-2xl transition font-semibold">
+                <i data-lucide="book-open"></i> My Courses
+            </a>
+            <a href="results.html" class="flex items-center gap-4 p-4 text-slate-500 hover:bg-slate-50 rounded-2xl transition font-semibold">
+                <i data-lucide="award"></i> Exam Results
+            </a>
+            <a href="announcements.html" class="flex items-center gap-4 p-4 bg-indigo-50 text-indigo-600 font-bold rounded-2xl transition">
+                <i data-lucide="megaphone"></i> Campus News
+            </a>
+            <a href="profile.html" class="flex items-center gap-4 p-4 text-slate-500 hover:bg-slate-50 rounded-2xl transition font-semibold">
+                <i data-lucide="user"></i> My Profile
+            </a>
+        </nav>
+        <button onclick="sessionStorage.clear(); window.location.replace('index.html');" class="flex items-center gap-4 p-4 text-red-500 font-bold hover:bg-red-50 rounded-2xl transition border-t pt-10">
+            <i data-lucide="log-out"></i> Logout
+        </button>
+    </aside>
+
+    <main class="flex-grow p-12">
+        <h1 class="text-4xl font-extrabold text-slate-900 mb-10">Campus Updates</h1>
+        <div class="space-y-8 max-w-4xl">
+            <div class="bg-white p-10 rounded-[2.5rem] border-l-8 border-indigo-600 shadow-sm">
+                <div class="flex items-center gap-2 text-indigo-600 font-black text-[10px] uppercase tracking-widest mb-4">Academic Notice</div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-3">Exam Timetable Release</h3>
+                <p class="text-slate-500 leading-relaxed">Semester 5 final examination schedule is now available. Please check the portal for your specific venue and session timing.</p>
+                <div class="mt-6 flex justify-between items-center text-xs font-bold text-slate-400">
+                    <span>Oct 24, 2024</span>
+                    <span class="text-indigo-600">Read More →</span>
+                </div>
+            </div>
+            <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm">
+                <div class="flex items-center gap-2 text-slate-400 font-black text-[10px] uppercase tracking-widest mb-4">Library Services</div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-3">24/7 Access for Finals</h3>
+                <p class="text-slate-500 leading-relaxed">The main campus library will extend operations to 24/7 starting next Monday to support study week.</p>
+            </div>
+        </div>
+    </main>
+    <script>lucide.createIcons();</script>
+</body>
+</html>
